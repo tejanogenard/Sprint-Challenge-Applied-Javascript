@@ -31,7 +31,12 @@ function Tab(){
     //    topics.textContent = ""
     //   newTab.textContent = ""
 
-        
+        newTab.classList.add('tabs')
+        topics.classList.add('topics')
+        title.classList.add('title')
 
+        newTab.append(topics);
+        newTab.append(title);
 
+    return newTab 
 }  

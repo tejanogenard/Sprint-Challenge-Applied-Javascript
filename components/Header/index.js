@@ -9,7 +9,7 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function createHeader() {
+function createHeader(obj) {
     //Create new elements 
  
     let headerContainer = document.createElement('div')
@@ -17,26 +17,34 @@ function createHeader() {
     let title = document.createElement('h1')
     let temperature = document.createElement('span')
 
+
+     //Set up the structure of our elements 
+     headerContainer.appendChild(date)
+     headerContainer.appendChild(title)
+     headerContainer.appendChild(temperature)
+ 
+
     //Class Names
-    headerContainer = classList.add('header-container')
+    headerContainer = classList.add('header')
 
-    //Set up the structure of our elements 
-    headerContainer.append(date)
-    headerContainer.append(title)
-    headerContainer.append(temperature)
-
-    date.textContent = "March 28, 2019"
-    title.textContent = "Lambda Times"
-    temperature.textContent = "temp, 98 °"
+   //Text Content
+    date.textContent = obj.date
+    title.textContent = obj.title
+    temperature.textContent = obj.temperature
 
 
     return headerContainer
 }
 
-const header = createHeader();
-let container = document.querySelector('.header-container')
+//Append to document
 
-container.appendChild(header)
+ let container = document.querySelector('.header-container')
+    container.appendChild(createHeader())
+
+
+// container.appendChild(header)
+
+// console.log(container)
 
 
 
