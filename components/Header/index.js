@@ -9,4 +9,29 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function createHeader() {
+    //Create new elements 
+ 
+    let headerContainer = document.createElement('div')
+    let date = document.createElement('span')
+    let title = document.createElement('h1')
+    let temperature = document.createElement('span')
+
+    //Class Names
+    headerContainer = classList.add('header-container')
+
+    //Set up the structure of our elements 
+    headerContainer.append(date)
+    headerContainer.append(title)
+    headerContainer.append(temperature)
+
+    date.textContent = "March 28, 2019"
+    title.textContent = "Lambda Times"
+    temperature.textContent = "temp, 98 °"
+
+
+
+    return headerContainer
+}
+
+
