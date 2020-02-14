@@ -30,8 +30,14 @@ function createHeader() {
     temperature.textContent = "temp, 98 °"
 
 
-
     return headerContainer
 }
+
+const header = createHeader();
+let container = document.querySelector('.header-container')
+
+container.appendChild(header)
+
+
 
 
